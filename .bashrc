@@ -46,6 +46,7 @@ alias sdkswap=". ~/my-bashrc/.j/sdkswap.sh" #Fuzzy select sdk by version
 extract () {
    if [ -f $1 ] ; then
        case $1 in
+	   *.tar.xz)    tar xvf $1     ;;
            *.tar.bz2)   tar xjf $1     ;;
            *.tar.gz)    tar xzf $1     ;;
            *.bz2)       bunzip2 $1     ;;
@@ -141,3 +142,6 @@ source <(kubectl completion bash)
 #Volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+#GraalVM
+export GRAALVM_HOME="$HOME/.sdkman/candidates/java/22-graalce"
