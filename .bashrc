@@ -38,6 +38,10 @@ alias gra='git remote add'       # Add a remote named <name>
 alias grv='git remote -v'        # List all currently configured remotes
 alias gcl='git clone'            # Clone a repository into a new directory
 
+#SDKMAN alias
+alias j=". ~/my-bashrc/.j/j.sh"	# Shorthand select java sdk
+alias sdkswap=". ~/my-bashrc/.j/sdkswap.sh" #Fuzzy select sdk by version
+
 # Function to extract various archives
 extract () {
    if [ -f $1 ] ; then
