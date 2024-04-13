@@ -93,7 +93,7 @@ update_bashrc_repo() {
     git commit -m "Update .bashrc as of $(date +'%Y-%m-%d %H:%M:%S')"
 
     # Push the changes to GitHub
-    git push origin master
+    git push origin main
 
     # Optionally, print a success message or return to the previous directory
     echo ".bashrc updated and pushed to GitHub on $(date)"
