@@ -119,11 +119,15 @@ if command -v lesspipe >/dev/null 2>&1; then
 fi
 
 
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+#SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+#K8S completion
 source <(crc completion bash)
 source <(oc completion bash)
 source <(kubectl completion bash)
+
+#Volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
