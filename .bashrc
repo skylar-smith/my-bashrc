@@ -145,3 +145,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 #GraalVM
 export GRAALVM_HOME="$HOME/.sdkman/candidates/java/22-graalce"
+
+#CRC
+export PATH="$HOME/crc:$PATH"
