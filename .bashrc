@@ -38,6 +38,12 @@ alias gra='git remote add'       # Add a remote named <name>
 alias grv='git remote -v'        # List all currently configured remotes
 alias gcl='git clone'            # Clone a repository into a new directory
 
+# Kubectl and things alias
+alias k=kubectl
+complete -o default -F __start_kubectl k
+alias kc=kubectx
+alias kn=kubens
+
 #SDKMAN alias
 alias j=". ~/my-bashrc/.j/j.sh"	# Shorthand select java sdk
 alias sdkswap=". ~/my-bashrc/.j/sdkswap.sh" #Fuzzy select sdk by version
@@ -135,8 +141,8 @@ elif [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
 fi
 
-source <(crc completion bash)
-source <(oc completion bash)
+# source <(crc completion bash)
+# source <(oc completion bash)
 source <(kubectl completion bash)
 
 #Volta
@@ -148,3 +154,7 @@ export GRAALVM_HOME="$HOME/.sdkman/candidates/java/22-graalce"
 
 #CRC
 export PATH="$HOME/crc:$PATH"
+eval "$(/bin/brew shellenv)"
+
+#Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
